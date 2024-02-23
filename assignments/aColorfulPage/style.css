@@ -1,0 +1,16 @@
+body {
+    background-image: url(../../Images/photo-1618340338709-027f57b98a16.avif);
+    background-repeat: no-repeat;
+}
+
+.gradient {
+    background: linear-gradient(48deg, rgba(191, 192, 192, 1) 15%, rgba(29, 47, 111, 1) 64%);
+}
+
+.links {
+    background: rgba(0, 0, 0, 0.324);
+}
+
+.cViolet {
+    color: violet;
+}
