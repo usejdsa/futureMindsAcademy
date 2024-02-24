@@ -1,0 +1,9 @@
+.first_word {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.first_letter {
+    font-size: 400%;
+    text-decoration: underline #ff4500;
+}
