@@ -1,0 +1,11 @@
+.p {
+    background-color: navy;
+}
+
+.p:hover {
+    background-color: aqua;
+}
+
+.p:hover::first-letter {
+    font-size: 300%;
+}
