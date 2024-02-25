@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+section:nth-of-type(even) {
+    background-color: rgb(241, 252, 220);
+}
+
+section:nth-of-type(odd) {
+    background-color: rgb(69, 71, 64);
+    color: white;
+}
+
+section {
+    height: 25hv;
+}
+
+hr {
+    width: 33%;
+    border-color: red;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 3em;
+}
+
+.p {
+    font-size: 1.5em;
+}
