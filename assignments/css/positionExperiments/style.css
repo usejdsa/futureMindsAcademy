@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.box {
+    width: 500px;
+    height: 50px;
+    margin: 30px;
+    box-shadow: 0px 0px 5px gray;
+    position: relative;
+}
+
+.p {
+    font-size: 10px;
+    padding: 0;
+    margin: 0 0 0 23px;
+    position: relative;
+    top: -10px;
+}
+
+.title {
+    position: relative;
+    top: -18px;
+    margin: 0 0 0 25px;
+}
+
+.x {
+    position: absolute;
+    padding: 1px 3px;
+    top: -13px;
+    right: -8px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.box0 {
+    width: 250px;
+    height: 100px;
+    position: fixed;
+    padding: 30px 0 35px 30px;
+    bottom: 0;
+    right: 0;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
