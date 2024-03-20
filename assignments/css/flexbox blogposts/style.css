@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Aside */
+aside {
+    width: 350px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(13, 73, 163);
+    padding: 300px 30px 10px 80px;
+    box-sizing: border-box;
+}
+
+.asideButton {
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid lightskyblue;
+}
+
+/* Card; top part */
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topLogo {
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid lightskyblue;
+}
+
+/* Global */
+
+.margin500L-150R {
+    margin: 0 150px 0 500px;
+}
+
+.marginY100 {
+    margin: 100px 0;
+}
+
+.marginY30 {
+    margin: 30px 0;
+}
+
+.buttonBlue {
+    padding: 3px;
+    border: 1px solid blue;
+    background-color: blue;
+}
+
+.buttonOrange {
+    padding: 3px;
+    border: 1px solid rgb(255, 60, 0);
+    background-color: rgb(255, 60, 0);
+}
+
+.buttonViolet {
+    padding: 3px;
+    border: 1px solid rgb(202, 0, 135);
+    background-color: rgb(202, 0, 135);
+}
+
+.fontSize3em {
+    font-size: 3em;
+}
+
+.fontSize2em {
+    font-size: 2em;
+}
+
+.cWhite {
+    color: white;
+}
+
+.cSkyblue {
+    color: lightskyblue;
+}
+
+.tDecoration-none {
+    text-decoration: none;
+}
