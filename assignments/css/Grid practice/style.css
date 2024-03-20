@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
+    background-color: rgb(255, 116, 139);
+}
+
+main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4rem;
+}
+
+main section {
+    background-color: palegreen;
+}
+
+footer {
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+    background-color: rgb(255, 116, 139);
+}
