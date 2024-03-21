@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 100px 100px 1fr;
+}
+
+.backdrop {
+    grid-column: 1 / 6;
+    grid-row: 1 /2;
+    height: 200px;
+    background-color: aqua;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.card {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 50px gray;
+    display: grid;
+    gap: 30px;
+}
+
+/* Global */
+
+.fontSize2rem {
+    font-size: 2rem;
+}
+
+.fontSize3rem {
+    font-size: 3rem;
+}
