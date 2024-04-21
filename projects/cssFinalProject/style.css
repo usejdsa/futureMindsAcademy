@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* font */
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-weight: 300;
+}
+
+.roboto-regular {
+    font-weight: 400;
+}
+
+.roboto-medium {
+    font-weight: 500;
+}
+
+.roboto-bold {
+    font-weight: 700;
+}
+
+/* body */
+body {
+    grid-template-columns: auto 1fr;
+    overflow: hidden;
+}
+
+/* aside */
+aside {
+    background-color: rgba(0, 0, 0, 0.75);
+    background-image: url(./assets/images/sidebar-1.jpg);
+    background-blend-mode: color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.asidearticle {
+    cursor: var(--cPointer);
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.asidearticle:hover:not(.active, .profile) {
+    background-color: rgba(66, 66, 66, 0.5);
+}
+
+.active {
+    background-color: crimson;
+    border-radius: 3px;
+}
+
+/* header & main */
+.container {
+    background-color: gainsboro;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+/* header */
+header {
+    padding: 50px;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.logo {
+    cursor: var(--cPointer);
+    box-shadow: var(--boxShadowGray);
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    transition: box-shadow 0.2s;
+}
+
+.logo:hover {
+    box-shadow: 4px 4px 4px rgb(51, 51, 51);
+}
+
+.headerRight {
+    display: flex;
+}
+
+.menu {
+    display: none;
+}
+
+.searchBar {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid gray;
+    background-color: transparent;
+}
+
+.searchBar:focus {
+    border-bottom: 3px solid crimson;
+}
+
+.notification {
+    position: relative;
+}
+
+.notificationInfo {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: crimson;
+    padding: 5px;
+    top: -7px;
+    right: -7px;
+}
+
+.notificationMore {
+    box-shadow: var(--boxShadowGray);
+    width: 230px;
+    background-color: white;
+    border-radius: 3px;
+    top: 10px;
+    right: 17px;
+    display: none;
+    z-index: 1;
+}
+
+.notification:hover .notificationMore {
+    display: block;
+}
+
+.notificationMore p {
+    cursor: var(--cPointer);
+    padding: 10px;
+}
+
+.notificationMore p:hover {
+    background-color: crimson;
+    border-radius: 2px;
+}
+
+/* main */
+main {
+    padding: 50px;
+    grid-template-rows: auto auto auto auto;
+    gap: 5rem;
+}
+
+.card {
+    box-shadow: var(--boxShadowGray);
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.languageCardContent {
+    grid-template-columns: 1fr 2fr;
+    padding: 20px 30px;
+}
+
+.cardIcon {
+    box-shadow: var(--boxShadowGray);
+    padding: 25px;
+    border-radius: 3px;
+    top: -30px;
+    left: 20px;
+}
+
+.cardTitle {
+    padding: 0 0 30px 85px;
+}
+
+.middleCards {
+    grid-row: 2/3;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem;
+}
+
+.middleCardsContent {
+    grid-template-columns: 1fr auto;
+}
+
+.bottomCard {
+    grid-row: 4 / 5;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 2fr;
+    gap: 4rem;
+}
+
+.bottomCardContent {
+    gap: 1rem;
+}
+
+.bottomCardImages {
+    cursor: var(--cPointer);
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.bottomCardImages {
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bottomCardImages:hover {
+    transform: translateY(-50px);
+}
+
+.bottomCardIcons {
+    cursor: var(--cPointer);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 60px;
+    display: none;
+}
+
+.bottomCardImagesMore:hover .bottomCardIcons {
+    display: flex;
+    gap: 2rem;
+}
+
+/* footer */
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+    aside {
+        display: none;
+    }
+
+    .languageCardContent {
+        grid-template-columns: 1fr;
+    }
+
+    .bottomCard {
+        grid-template-columns: 1fr;
+    }
+
+    .headerRight {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .middleCards {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    header,
+    main {
+        padding: 20px;
+    }
+
+}
+
+/* variables */
+:root {
+    --cPointer: pointer;
+    --boxShadowGray: 3px 3px 3px rgb(136, 136, 136);
+}
+
+/* global */
+
+.marginY20px {
+    margin: 20px 0;
+}
+
+.marginX20px {
+    margin: 0 20px;
+}
+
+.padding50px {
+    padding: 50px;
+}
+
+.padding10px {
+    padding: 10px;
+}
+
+.padding20px {
+    padding: 20px;
+}
+
+.dFlex {
+    display: flex;
+}
+
+.dGrid {
+    display: grid;
+}
+
+.alignItemsCenter {
+    align-items: center;
+}
+
+.gap2rem {
+    gap: 2rem;
+}
+
+.JcSpaceBetween {
+    justify-content: space-between;
+}
+
+.JcCenter {
+    justify-content: center;
+}
+
+.pAbsolute {
+    position: absolute;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.fontSize2rem {
+    font-size: 2em;
+}
+
+.bgGreen {
+    background-color: rgb(0, 170, 0);
+}
+
+.cWhite {
+    color: white;
+}
+
+.bgOrange {
+    background-color: orange;
+}
+
+.bgCrimson {
+    background-color: crimson;
+}
+
+.bgBlue {
+    background-color: rgb(0, 162, 255);
+}
+
+.imgWidth {
+    width: 20px;
+}
+
+.pRelative {
+    position: relative;
+}
