@@ -79,7 +79,7 @@ header {
     box-shadow: var(--boxShadowGray);
     border-radius: 50%;
     padding: 10px;
-    background-color: white;
+    background-color: var(--cWhite);
     transition: box-shadow 0.2s;
 }
 
@@ -123,7 +123,7 @@ header {
 .notificationMore {
     box-shadow: var(--boxShadowGray);
     width: 230px;
-    background-color: white;
+    background-color: var(--cWhite);
     border-radius: 3px;
     top: 10px;
     right: 17px;
@@ -143,6 +143,7 @@ header {
 .notificationMore p:hover {
     background-color: crimson;
     border-radius: 2px;
+    color: var(--cWhite);
 }
 
 /* main */
@@ -152,14 +153,14 @@ main {
     gap: 5rem;
 }
 
+/* cards */
 .card {
     box-shadow: var(--boxShadowGray);
-    background-color: white;
+    background-color: var(--cWhite);
     border-radius: 5px;
-    position: relative;
 }
 
-.languageCardContent {
+.topCardContent {
     grid-template-columns: 1fr 2fr;
     padding: 20px 30px;
 }
@@ -202,10 +203,6 @@ main {
     cursor: var(--cPointer);
     width: 100%;
     border-radius: 10px;
-
-}
-
-.bottomCardImages {
     transform: translateY(-20px);
     transition: transform 0.3s ease-in-out;
 }
@@ -222,7 +219,7 @@ main {
     display: none;
 }
 
-.bottomCardImagesMore:hover .bottomCardIcons {
+.bottomCardImagesContainer:hover .bottomCardIcons {
     display: flex;
     gap: 2rem;
 }
@@ -239,7 +236,7 @@ footer a {
         display: none;
     }
 
-    .languageCardContent {
+    .topCardContent {
         grid-template-columns: 1fr;
     }
 
@@ -273,6 +270,7 @@ footer a {
 :root {
     --cPointer: pointer;
     --boxShadowGray: 3px 3px 3px rgb(136, 136, 136);
+    --cWhite: white;
 }
 
 /* global */
@@ -307,6 +305,10 @@ footer a {
 
 .alignItemsCenter {
     align-items: center;
+}
+
+.gap1rem {
+    gap: 1rem;
 }
 
 .gap2rem {
