@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 350px 1fr;
+    overflow: hidden;
+}
+
+aside {
+    height: 100vh;
+    overflow-y: scroll;
+    grid-column: 1 / 2;
+    grid-row: 1/ 2;
+    background-color: rgb(13, 73, 163);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.asideSect {
+    grid-row: 2 / 3;
+}
+
+.asideButton {
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid lightskyblue;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 100px;
+    display: grid;
+    gap: 100px;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topLogo {
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid lightskyblue;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+    aside {
+        width: 100vw;
+        height: auto;
+        z-index: 2;
+    }
+
+    main {
+        grid-row: 2/ 3;
+        grid-column: 1 / 3;
+    }
+
+}
+
+/* Global */
+.fontSize3em {
+    font-size: 3em;
+}
+
+.fontSize2em {
+    font-size: 2em;
+}
+
+.cWhite {
+    color: white;
+}
+
+.cSkyblue {
+    color: lightskyblue;
+}
+
+.marginY50px {
+    margin: 50px 0;
+}
+
+
+.buttonBlue {
+    padding: 3px;
+    border: 1px solid blue;
+    background-color: blue;
+}
+
+.buttonOrange {
+    padding: 3px;
+    border: 1px solid rgb(255, 60, 0);
+    background-color: rgb(255, 60, 0);
+}
+
+.buttonViolet {
+    padding: 3px;
+    border: 1px solid rgb(202, 0, 135);
+    background-color: rgb(202, 0, 135);
+}
+
+.tDecoration-none {
+    text-decoration: none;
+}
