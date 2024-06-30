@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function expressions</title>
+</head>
+
+<body>
+
+    <script>
+        // calling the function before its created (wont work)
+        // printHelloWorldTenTimes();
+
+        const printHelloWorldTenTimes = function () {
+            for (let i = 0; i < 10; i++) {
+                console.log("Hello World!");
+            }
+        };
+
+        const printString = (string) => {
+            console.log(string);
+        };
+
+        const kilometersToMiles = (kilometers) => {
+            let miles = kilometers * 0.621371;
+            return miles;
+        };
+
+        const calculateCircleArea = (radius) => {
+            let area = 3.141592653 * (radius * radius);
+            return area;
+        };
+
+        const welcomeUser = (name, surname) => {
+            return `Welcome, ${name} ${surname}`;
+        };
+
+        const isWorkingCitizen = function (age) {
+            return age >= 18 && age < 65;
+        };
+
+        const isEven = (number) => {
+            return number % 2 === 0;
+        };
+
+
+        printHelloWorldTenTimes();
+
+        printString("This is a test string!");
+
+        miles = kilometersToMiles(10);
+        console.log(`10 kilometers is equal to ${miles} miles.`);
+
+        area = calculateCircleArea(4);
+        console.log(`The area of a circle with radius 4 is ${area}.`);
+
+        let welcomeMessage = welcomeUser("Usejd", "Salihu");
+        console.log(welcomeMessage);
+
+        let workingCitizen = isWorkingCitizen(30);
+        console.log(`Is 30 years old a working citizen? ${workingCitizen}`);
+
+        let even = isEven(4);
+        console.log(`Is 4 an even number? ${even}`);
+    </script>
+</body>
+
+</html>
