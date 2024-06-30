@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closest answer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="correctAnswer"></h1>
+        <div class="guessContainer">
+            <div class="playerOneContainer">
+                <h3>Player One</h3>
+                <h2 class="playerOneGuess"></h2>
+            </div>
+            <div class="playerTwoContainer">
+                <h3>Player Two</h3>
+                <h2 class="playerTwoGuess"></h2>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let answer = Math.floor(Math.random() * 20) + 1;
+
+        let playerOne = parseInt(prompt('Player one guess; '));
+        let playerTwo = parseInt(prompt('Player two guess; '));
+
+        if (isNaN(playerOne) || isNaN(playerTwo)) {
+            alert('Please only write numbers!');
+        }
+        if ((playerOne < 0 || playerOne > 20) || (playerTwo < 0 || playerTwo > 20)) {
+            alert('Please choose numbers from 0-20!');
+        }
+
+        let playerOneDistance = Math.abs(answer - playerOne);
+        let playerTwoDistance = Math.abs(answer - playerTwo);
+
+
+        const correctAnswer = document.querySelector('.correctAnswer');
+        const playerOneGuess = document.querySelector('.playerOneGuess');
+        const playerTwoGuess = document.querySelector('.playerTwoGuess');
+
+
+
+        correctAnswer.textContent = 'The correct answer is; ' + answer;
+        playerOneGuess.textContent = playerOne;
+        playerTwoGuess.textContent = playerTwo;
+        const playerOneContainer = document.querySelector('.playerOneContainer');
+        const playerTwoContainer = document.querySelector('.playerTwoContainer');
+
+        if (playerOneDistance < playerTwoDistance) {
+            playerOneContainer.style.backgroundColor = 'green';
+            playerTwoContainer.style.backgroundColor = 'red';
+        } else if (playerTwoDistance < playerOneDistance) {
+            playerTwoContainer.style.backgroundColor = 'green';
+            playerOneContainer.style.backgroundColor = 'red';
+        } else {
+            playerOneContainer.style.backgroundColor = 'gray';
+            playerTwoContainer.style.backgroundColor = 'gray';
+        }
+
+    </script>
+</body>
+
+</html>
