@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+
+    <script>
+        let nameInput = prompt('write the username; ');
+        let passwordInput = prompt('write the password; ');
+        let username = 'admin';
+        let password = '12341234';
+
+        // AND operator
+        if ((username == nameInput) & (password == passwordInput)) {
+            console.log('Welcome to the website');
+        }
+        else {
+            console.log('Wrong credentials');
+        }
+
+        // OR and NOT operators
+        // if (!(username == nameInput) || !(password == passwordInput)) {
+        //     console.log('Wrong credentials');
+        // }
+        // else {
+        //     console.log('Welcome to the website');
+        // }
+    </script>
+</body>
+
+</html>
