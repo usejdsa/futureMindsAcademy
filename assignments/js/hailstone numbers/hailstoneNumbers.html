@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hailstone numbers</title>
+</head>
+
+<body>
+
+    <script>
+        let number = parseInt(prompt("Enter a positive integer:"));
+
+        if (isNaN(number) || number <= 0) {
+            throw new Error("Please enter a positive integer.");
+        } else {
+
+            let nrString = "";
+
+            while (number !== 1) {
+                nrString += number + " ";
+                if (number % 2 === 0) {
+                    number = number / 2;
+                } else {
+                    number = (number * 3) + 1;
+                }
+            }
+            nrString += number;
+
+            console.log(nrString);
+        }
+    </script>
+</body>
+
+</html>
