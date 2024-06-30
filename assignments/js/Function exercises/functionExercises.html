@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function exercises</title>
+</head>
+
+<body>
+
+    <script>
+        // f1
+        function printHelloWorldTenTimes() {
+            for (let i = 0; i < 10; i++) {
+                console.log("Hello World!");
+            }
+        }
+        printHelloWorldTenTimes();
+
+
+        // f2
+        function printString(string) {
+            console.log(string);
+        }
+        printString("Hello, this is a test string!");
+
+
+        // f3
+        function kilometersToMiles(kilometers) {
+            let miles = kilometers * 0.621371;
+            return miles;
+        }
+        miles = kilometersToMiles(10);
+        console.log(`10 kilometers is equal to ${miles} miles.`);
+
+
+        // f4
+        function calculateCircleArea(radius) {
+            let area = 3.141592653 * (radius * radius);
+            return area;
+        }
+        area = calculateCircleArea(4);
+        console.log(`The area of a circle with radius 4 is ${area}.`);
+
+
+        // f5
+        function welcomeUser(name, surname) {
+            let fullName = `Welcome, ${name} ${surname}`;
+            return fullName;
+        }
+        let welcomeMessage = welcomeUser("Usejd", "Salihu");
+        console.log(welcomeMessage);
+
+
+        // f6
+        function isWorkingCitizen(age) {
+            return age >= 18 && age < 65;
+        }
+        let workingCitizen = isWorkingCitizen(30);
+        console.log(`Is 30 years old a working citizen? ${workingCitizen}`);
+
+
+        // f7
+        function isEven(number) {
+            return number % 2 === 0;
+        }
+
+        let even = isEven(4);
+        console.log(`Is 4 an even number? ${even}`);
+
+    </script>
+</body>
+
+</html>
