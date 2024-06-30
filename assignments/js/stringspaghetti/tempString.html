@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract temperature string</title>
+</head>
+
+<body>
+
+    <script>
+        // let temperatureInfo = "Ottawa, -4°C";
+        // let temperatureInfo = "Prishtina, 50°F";
+        let temperatureInfo = "New York, 15°C";
+        let city = temperatureInfo.split(",")[0].trim();
+        let temperatureString = temperatureInfo.split(",")[1].trim();
+        let temperature = parseInt(temperatureString);
+        console.log(city);
+        console.log(temperature);
+
+    </script>
+</body>
+
+</html>
