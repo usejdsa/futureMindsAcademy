@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Progress bar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="progress-bar-container">
+        <span class="indicator">0%</span>
+        <div class="progress-bar-wrapper">
+            <div id="bar" class="progress-bar"></div>
+        </div>
+        <span class="indicator">100%</span>
+    </div>
+
+    <script>
+
+        function isValidPercentage(n) {
+            return !isNaN(n) && n >= 0 && n <= 100;
+        }
+
+        function getProgressColor(n) {
+            if (n <= 20) {
+                return "darkred";
+            } else if (n <= 50) {
+                return "orange";
+            } else if (n <= 80) {
+                return "yellow";
+            } else {
+                return 'green';
+            }
+        }
+
+        function modifyProgressBar(n, color) {
+            let progressBar = document.querySelector('#bar');
+            progressBar.style.height = `${n}%`;
+            progressBar.style.backgroundColor = color;
+            progressBar.setAttribute('title', `${n}%`);
+        }
+
+        function setProgress(n) {
+            if (isValidPercentage(n)) {
+                let color = getProgressColor(n);
+                modifyProgressBar(n, color);
+            } else {
+                console.error('Invalid percentage value!');
+            }
+        }
+
+        setInterval(() => {
+            let n = Math.floor(Math.random() * 101);
+            setProgress(n);
+        }, 2000);
+
+
+    </script>
+
+</body>
+
+</html>
