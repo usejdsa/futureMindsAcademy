@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci sequence</title>
+</head>
+
+<body>
+
+    <script>
+        let x = parseInt(prompt('Enter the number of terms; '));
+
+        if (isNaN(x) || x <= 0) {
+            throw new Error('Please enter a valid number of terms; ');
+        }
+        else {
+            let a = 1, b = 1;
+
+            console.log(a);
+
+            if (x > 1) {
+                console.log(b);
+            }
+
+            for (let i = 3; i <= x; i++) {
+                let nextTerm = a + b;
+                console.log(nextTerm);
+                a = b;
+                b = nextTerm;
+            }
+        }
+    </script>
+</body>
+
+</html>
